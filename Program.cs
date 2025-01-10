@@ -1,17 +1,20 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.VisualBasic;
 
 namespace ZooManagementSystem
 {
     public class Animal
     {
-        public string Name { get; set; }
-        public string Diet { get; set; }
+        public string Name;
+        public string Diet;
+        public float Peso;
 
-        public Animal(string name, string diet)
+        public Animal(string name, string diet, float peso)
         {
-            Name = name;
-            Diet = diet;
+            this.Name = name;
+            this.Diet = diet;
+            this.Peso = peso;
         }
 
         public string GetFood()
@@ -21,26 +24,25 @@ namespace ZooManagementSystem
     }
         public class Show
     {
-        public string Name { get; set; }
-        public DateTime Time { get; set; }
-
+        public string Name;
+        public DateTime Time;
         public Show(string name, DateTime time)
         {
-            Name = name;
-            Time = time;
+            this.Name = name;
+            this.Time = time;
         }
     }
     public class Zoo
     {
-        public string Name { get; set; }
+        public string Name;
         private List<Animal> Animals;
         private List<Show> Shows;
 
         public Zoo(string name)
         {
-            Name = name;
-            Animals = new List<Animal>();
-            Shows = new List<Show>();
+            this.Name = name;
+            this.Animals = new List<Animal>();
+            this.Shows = new List<Show>();
         }
 
         public void AddAnimal(Animal animal)
@@ -54,7 +56,7 @@ namespace ZooManagementSystem
             Console.WriteLine("Animais no zoológico:");
             foreach (var animal in Animals)
             {
-                Console.WriteLine($"- {animal.Name} ({animal.Diet})");
+                Console.WriteLine($"- {animal.Name} ({animal.Diet}) Peso:({animal.Peso}kg)");
             }
         }
 
