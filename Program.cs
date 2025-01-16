@@ -22,7 +22,7 @@ namespace ZooManagementSystem
             return Diet == "Carnívoro" ? "carne" : "plantas";
         }
     }
-        public class Show
+    public class Show
     {
         public string Name;
         public DateTime Time;
@@ -79,6 +79,15 @@ namespace ZooManagementSystem
             else
             {
                 Console.WriteLine($"Animal {animalName} não encontrado.");
+            }
+        }
+
+        public void ListadeAnimais()
+        {
+            Console.WriteLine("Lista de Animais:");
+            foreach (var ani in Animals)
+            {
+                Console.WriteLine($"- {ani.Name} Alimentação :({ani.Diet})");
             }
         }
 
