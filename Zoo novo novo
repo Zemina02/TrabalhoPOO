@@ -4,7 +4,6 @@ using ZooManagementSystem;
 Zoo zoo = new Zoo("Safari Zoo");
 
 string filepath1 = "C:/Users/home/Desktop/Programação orientada a objetos/trabalho grupo/jardim zoo/files de guardar/lista.json"; // @"C:\Users\...\lista.json"
-string filepath2 = "C:/Users/home/Desktop/Programação orientada a objetos/trabalho grupo/jardim zoo/files de guardar/show.json";  // @"C:\Users\...\show.json"
 
 // Adicionar animais ao zoológico
 zoo.AddAnimal(new Animal("Leao", "Carnivoro", 190));
@@ -24,7 +23,7 @@ while (colha != 0)
     Console.WriteLine("7 - Ver Lista de Espetáculos");
     Console.WriteLine("8 - Limpar jaulas");
     Console.WriteLine("9 - Gravar Zoo");
-    Console.WriteLine("11 - Carregar Zoo");
+    Console.WriteLine("10 - Carregar Zoo");
     Console.WriteLine("0 - Sair");
 
 
@@ -82,7 +81,7 @@ while (colha != 0)
     void AssistenciaVet()
     {
         Console.WriteLine("Qual o animal que presisa de assistência médica?(NOME)\n");
-        zoo.ListadeAnimais();
+        zoo.ListAnimals();
         string nanimal = Console.ReadLine();
         zoo.ProvideVeterinaryCare(nanimal);
     }
